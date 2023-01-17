@@ -22,3 +22,13 @@ def function(arg_1, arg_2=42):
     See https://www.datacamp.com/community/tutorials/docstrings-python    
     for more info.    
   """
+
+def the_answer():
+  """Return the answer to life,   the universe, and everything.  
+  Returns:    
+  int  
+  """
+  return 42
+
+#Receive Docstring
+print(the_answer.__doc__)
