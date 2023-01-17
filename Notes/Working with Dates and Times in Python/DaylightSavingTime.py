@@ -24,3 +24,13 @@ dt = datetime(2000, 3, 29, tzinfo = tz.gettz('Europe/London'))
 # Loop over the dates, replacing the year, and print the ISO timestamp
 for y in range(2000, 2011):
   print(dt.replace(year=y).isoformat())
+
+#Find ambiguity
+# Loop over trips
+for trip in onebike_datetimes:
+  # Rides with ambiguous start
+  if tz.datetime_ambiguous(trip['start']):
+    print("Ambiguous start at " + str(trip['start']))
+  # Rides with ambiguous end
+  if tz.datetime_ambiguous(trip['end']):
+    print("Ambiguous end at " + str(trip['end']))
