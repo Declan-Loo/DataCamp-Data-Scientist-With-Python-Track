@@ -32,3 +32,12 @@ def the_answer():
 
 #Receive Docstring
 print(the_answer.__doc__)
+
+#To inspect a docstring:
+import inspect
+
+# Inspect the count_letter() function to get its docstring
+docstring = inspect.getdoc(the_answer)
+
+border = '#' * 28
+print('{}\n{}\n{}'.format(border, docstring, border))
